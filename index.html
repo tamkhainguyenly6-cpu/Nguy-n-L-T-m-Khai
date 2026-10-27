@@ -1,39 +1,231 @@
+HTML
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Khám phá GreenLife - Marketing xanh, sản phẩm bền vững và lối sống thân thiện với môi trường.">
+    <title>GreenLife | Green Marketing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-document.addEventListener("DOMContentLoaded", function () {
-    const contactForm = document.getElementById("contactForm");
-    const formMessage = document.getElementById("formMessage");
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#home" class="logo">🌿 GreenLife</a>
 
-    if (!contactForm || !formMessage) {
-        console.error(
-            "Không tìm thấy contactForm hoặc formMessage. Hãy kiểm tra index.html."
-        );
-        return;
-    }
+        <nav class="navbar" id="navbar">
+            <a href="#home">Trang chủ</a>
+            <a href="#about">Giới thiệu</a>
+            <a href="#benefits">Lợi ích</a>
+            <a href="#products">Sản phẩm xanh</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
 
-    contactForm.addEventListener("submit", function (event) {
-        event.preventDefault();
+        <button class="theme-btn" id="themeBtn" aria-label="Chuyển chế độ sáng tối">🌙</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Mở menu">☰</button>
+    </header>
 
-        const nameInput = document.getElementById("name");
-        const emailInput = document.getElementById("email");
-        const messageInput = document.getElementById("message");
+    <main>
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <span class="tag">SUSTAINABLE FUTURE</span>
+                <h1>Marketing xanh,<br>
+                    <span>tương lai xanh</span></h1>
 
-        if (!nameInput || !emailInput || !messageInput) {
-            console.error("Thiếu trường nhập liệu trong form.");
-            return;
-        }
+                <p>
+                    Phát triển thương hiệu bền vững bằng những giải pháp
+                    marketing thân thiện với môi trường. Thay đổi hôm nay
+                    để kiến tạo một hành tinh xanh ngày mai.
+                </p>
 
-        const name = nameInput.value.trim();
-        const email = emailInput.value.trim();
+                <div class="hero-buttons">
+                    <a href="#about" class="btn primary">Khám phá ngay</a>
+                    <a href="#products" class="btn secondary">Sản phẩm xanh</a>
+                </div>
 
-        if (name === "" || email === "") {
-            formMessage.textContent = "Vui lòng nhập họ tên và email.";
-            return;
-        }
+                <div class="hero-stats">
+                    <div>
+                        <strong>3R</strong>
+                        <span>Reduce - Reuse - Recycle</span>
+                    </div>
+                    <div>
+                        <strong>Eco</strong>
+                        <span>Tiêu dùng bền vững</span>
+                    </div>
+                </div>
+            </div>
 
-        formMessage.textContent =
-            "Cảm ơn " + name +
-            " đã đăng ký nhận thông tin Marketing Xanh! 🌿";
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1000&q=85"
+                     alt="Khu rừng xanh tượng trưng cho môi trường bền vững">
+                <div class="image-label">
+                    <span>🌱</span>
+                    <div>
+                        <strong>Think Green</strong>
+                        <p>Act for the Planet</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        contactForm.reset();
-    });
-});
+        <!-- ABOUT -->
+        <section class="section about" id="about">
+            <div class="section-heading">
+<span class="tag">ABOUT GREEN MARKETING</span>
+                <h2>Marketing xanh là gì?</h2>
+                <p>
+                    Marketing xanh là chiến lược tiếp thị hướng đến việc
+                    giảm tác động tiêu cực đến môi trường trong quá trình
+                    phát triển, quảng bá và phân phối sản phẩm, dịch vụ.
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <article class="info-card">
+                    <div class="card-icon">🌍</div>
+                    <h3>Bảo vệ môi trường</h3>
+                    <p>Giảm rác thải, hạn chế ô nhiễm và sử dụng tài nguyên hiệu quả.</p>
+                </article>
+
+                <article class="info-card">
+                    <div class="card-icon">♻️</div>
+                    <h3>Tiêu dùng bền vững</h3>
+                    <p>Khuyến khích lựa chọn sản phẩm có thể tái sử dụng hoặc tái chế.</p>
+                </article>
+
+                <article class="info-card">
+                    <div class="card-icon">💚</div>
+                    <h3>Thương hiệu xanh</h3>
+                    <p>Xây dựng niềm tin bằng những cam kết môi trường minh bạch.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- BENEFITS -->
+        <section class="section benefits" id="benefits">
+            <div class="section-heading">
+                <span class="tag">WHY GO GREEN?</span>
+                <h2>Lợi ích của marketing xanh</h2>
+                <p>Giá trị bền vững cho doanh nghiệp, khách hàng và hành tinh.</p>
+            </div>
+
+            <div class="benefit-list">
+                <div class="benefit-item">
+                    <span class="benefit-number">01</span>
+                    <div>
+                        <h3>Nâng cao hình ảnh thương hiệu</h3>
+                        <p>Thể hiện trách nhiệm xã hội và tạo sự khác biệt trên thị trường.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <span class="benefit-number">02</span>
+                    <div>
+                        <h3>Thu hút khách hàng quan tâm đến môi trường</h3>
+                        <p>Đáp ứng nhu cầu về sản phẩm và dịch vụ có trách nhiệm hơn.</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <span class="benefit-number">03</span>
+                    <div>
+                        <h3>Hướng đến tăng trưởng dài hạn</h3>
+                        <p>Khuyến khích đổi mới, tiết kiệm tài nguyên và cải thiện quy trình.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS -->
+        <section class="section products" id="products">
+<div class="section-heading">
+                <span class="tag">ECO-FRIENDLY CHOICES</span>
+                <h2>Gợi ý sản phẩm xanh</h2>
+                <p>Những lựa chọn có thể góp phần hình thành lối sống bền vững.</p>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1544816155-12df9643f363?auto=format&fit=crop&w=700&q=80"
+                         alt="Sổ tay dùng trong học tập và công việc">
+                    <div class="product-info">
+                        <span class="product-type">TÁI SỬ DỤNG</span>
+                        <h3>Sổ tay thân thiện</h3>
+                        <p>Ưu tiên giấy tái chế có nguồn gốc rõ ràng.</p>
+                        <a href="#contact" class="product-link">Tìm hiểu thêm →</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=700&q=80"
+                         alt="Bình nước dùng nhiều lần">
+                    <div class="product-info">
+                        <span class="product-type">DÙNG NHIỀU LẦN</span>
+                        <h3>Bình nước cá nhân</h3>
+                        <p>Hạn chế nhu cầu sử dụng chai dùng một lần.</p>
+                        <a href="#contact" class="product-link">Tìm hiểu thêm →</a>
+                    </div>
+                </article>
+
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=700&q=80"
+                         alt="Giày thể thao được trưng bày">
+                    <div class="product-info">
+                        <span class="product-type">THIẾT KẾ BỀN VỮNG</span>
+                        <h3>Thời trang có trách nhiệm</h3>
+                        <p>Ưu tiên độ bền, vật liệu phù hợp và sản xuất minh bạch.</p>
+                        <a href="#contact" class="product-link">Tìm hiểu thêm →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CALL TO ACTION -->
+        <section class="cta">
+            <div>
+                <span class="tag">SMALL STEPS, BIG CHANGE</span>
+                <h2>Sống xanh bắt đầu từ hôm nay!</h2>
+                <p>Mỗi lựa chọn có trách nhiệm đều có thể tạo nên sự khác biệt.</p>
+            </div>
+            <a href="#contact" class="btn light-btn">Cùng hành động 🌱</a>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section contact" id="contact">
+            <div class="section-heading">
+                <span class="tag">LET'S CONNECT</span>
+<h2>Lan tỏa lối sống xanh</h2>
+                <p>Đăng ký nhận thông tin về marketing xanh và tiêu dùng bền vững.</p>
+            </div>
+
+            <form id="contactForm" class="contact-form">
+                <label for="name">Họ và tên</label>
+                <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+
+                <label for="message">Thông điệp của bạn</label>
+                <textarea id="message" name="message" rows="4" placeholder="Bạn muốn chia sẻ điều gì về sống xanh?"></textarea>
+
+                <button type="submit" class="btn primary submit-btn">
+                    Đăng ký ngay
+                </button>
+
+                <p id="formMessage" class="form-message" role="status"></p>
+            </form>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+<footer class="footer">
+        <a href="#home" class="logo">🌿 GreenLife</a>
+        <p>Marketing có trách nhiệm hôm nay, tương lai bền vững ngày mai.</p>
+        <p class="copyright">© 2026 GreenLife. Website dự án học tập.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>a
