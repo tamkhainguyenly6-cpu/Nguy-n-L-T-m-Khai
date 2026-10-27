@@ -1,33 +1,39 @@
-<h2>Lan tỏa lối sống xanh</h2>
-                <p>Đăng ký nhận thông tin về marketing xanh và tiêu dùng bền vững.</p>
-            </div>
 
-            <form id="contactForm" class="contact-form">
-                <label for="name">Họ và tên</label>
-                <input type="text" id="name" name="name" placeholder="Nhập họ và tên" required>
+document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contactForm");
+    const formMessage = document.getElementById("formMessage");
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+    if (!contactForm || !formMessage) {
+        console.error(
+            "Không tìm thấy contactForm hoặc formMessage. Hãy kiểm tra index.html."
+        );
+        return;
+    }
 
-                <label for="message">Thông điệp của bạn</label>
-                <textarea id="message" name="message" rows="4" placeholder="Bạn muốn chia sẻ điều gì về sống xanh?"></textarea>
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-                <button type="submit" class="btn primary submit-btn">
-                    Đăng ký ngay
-                </button>
+        const nameInput = document.getElementById("name");
+        const emailInput = document.getElementById("email");
+        const messageInput = document.getElementById("message");
 
-                <p id="formMessage" class="form-message" role="status"></p>
-            </form>
-        </section>
-    </main>
+        if (!nameInput || !emailInput || !messageInput) {
+            console.error("Thiếu trường nhập liệu trong form.");
+            return;
+        }
 
-    <!-- FOOTER -->
-<footer class="footer">
-        <a href="#home" class="logo">🌿 GreenLife</a>
-        <p>Marketing có trách nhiệm hôm nay, tương lai bền vững ngày mai.</p>
-        <p class="copyright">© 2026 GreenLife. Website dự án học tập.</p>
-    </footer>
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
 
-    <script src="script.js"></script>
-</body>
-</html>
+        if (name === "" || email === "") {
+            formMessage.textContent = "Vui lòng nhập họ tên và email.";
+            return;
+        }
+
+        formMessage.textContent =
+            "Cảm ơn " + name +
+            " đã đăng ký nhận thông tin Marketing Xanh! 🌿";
+
+        contactForm.reset();
+    });
+});
