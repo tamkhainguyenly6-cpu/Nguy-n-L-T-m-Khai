@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GreenLife - Marketing xanh | Nhóm 1 MKT</title>
+<meta name="description" content="GreenLife giới thiệu marketing xanh: cách doanh nghiệp bán hàng thân thiện với môi trường, lợi ích cho thương hiệu và những sản phẩm xanh dễ bắt đầu. Dự án học tập của Nhóm 1 MKT.">
+<link rel="canonical" href="https://nhom1mkt.id.vn/landing.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GreenLife - Marketing xanh">
+<meta property="og:description" content="Bán hàng mà không làm hại hành tinh. Tìm hiểu marketing xanh cùng Nhóm 1 MKT.">
+<meta property="og:url" content="https://nhom1mkt.id.vn/landing.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #14231a;
+  --moss: #1e4a31;
+  --leaf: #3f8a4f;
+  --mint: #dcebd9;
+  --chalk: #f5f8f2;
+  --sun: #f0b43a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  color: var(--ink);
+  background: var(--chalk);
+  line-height: 1.65;
+  font-size: 1.0625rem;
+}
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; }
+.wrap { width: min(1040px, 100% - 2.5rem); margin-inline: auto; }
+
+/* Header */
+.site-header { background: var(--moss); color: var(--chalk); }
+.site-header .wrap { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 2rem; padding-block: 1rem; }
+.logo { font-weight: 800; font-size: 1.25rem; text-decoration: none; letter-spacing: -.01em; }
+.site-nav { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; }
+.site-nav a { text-decoration: none; font-weight: 600; font-size: .95rem; padding-block: .25rem; border-bottom: 2px solid transparent; }
+.site-nav a:hover { border-bottom-color: var(--sun); }
+
+/* Hero */
+.hero { background: var(--moss); color: var(--chalk); padding-block: clamp(2.5rem, 7vw, 5.5rem) clamp(3rem, 8vw, 6rem); overflow: hidden; }
+.hero .wrap { display: grid; grid-template-columns: 1.4fr 1fr; gap: 2.5rem; align-items: center; }
+.hero h1 { font-size: clamp(2.3rem, 6.2vw, 4.4rem); line-height: 1.04; font-weight: 800; letter-spacing: -.03em; }
+.hero p { margin-top: 1.5rem; max-width: 34rem; font-size: 1.15rem; color: var(--mint); }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+.btn { display: inline-block; padding: .85rem 1.5rem; border-radius: 999px; font-weight: 600; text-decoration: none; border: 2px solid var(--sun); }
+.btn-solid { background: var(--sun); color: var(--ink); }
+.btn-solid:hover { background: #f6c968; }
+.btn-line { color: var(--chalk); border-color: var(--leaf); }
+.btn-line:hover { border-color: var(--chalk); }
+.leaf { position: relative; width: min(340px, 80%); aspect-ratio: 1; margin-inline: auto; background: var(--leaf); border-radius: 0 100% 0 100%; }
+.leaf::before { content: ""; position: absolute; left: 10%; right: 10%; top: 50%; height: 4px; background: var(--moss); border-radius: 4px; transform: rotate(-45deg); }
+.leaf::after { content: ""; position: absolute; right: -6%; bottom: 4%; width: 28%; aspect-ratio: 1; background: var(--sun); border-radius: 50%; }
+
+/* Sections */
+.section { padding-block: clamp(3rem, 7vw, 5rem); }
+.section h2 { font-size: clamp(1.7rem, 4vw, 2.5rem); line-height: 1.15; letter-spacing: -.02em; font-weight: 800; }
+.split { display: grid; grid-template-columns: 1fr 1.4fr; gap: 2rem 3rem; align-items: start; }
+.split p + p { margin-top: 1rem; }
+.prose { max-width: 40rem; }
+
+.rows { margin-top: 2.5rem; }
+.row { display: grid; grid-template-columns: 1fr 1.6fr; gap: .5rem 3rem; padding-block: 1.5rem; border-top: 2px solid var(--moss); }
+.row:last-child { border-bottom: 2px solid var(--moss); }
+.row h3 { font-size: 1.25rem; line-height: 1.3; }
+
+.band { background: var(--mint); }
+.items { margin-top: 2.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 2rem 2.5rem; }
+.item { border-left: 6px solid var(--leaf); padding-left: 1.1rem; }
+.item h3 { font-size: 1.15rem; line-height: 1.3; margin-bottom: .35rem; }
+.note { margin-top: 2rem; font-size: .95rem; max-width: 40rem; }
+
+/* Contact */
+.contact { background: var(--moss); color: var(--chalk); }
+.contact p { margin-top: 1rem; max-width: 36rem; color: var(--mint); }
+.contact .actions { margin-top: 1.75rem; }
+
+/* Footer */
+.site-footer { background: var(--ink); color: var(--mint); padding-block: 1.5rem; font-size: .9rem; }
+
+@media (max-width: 760px) {
+  .hero .wrap, .split, .row { grid-template-columns: 1fr; }
+  .leaf { width: min(220px, 60%); margin-top: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="#top">GreenLife</a>
+    <nav class="site-nav" aria-label="Điều hướng chính">
+      <a href="#about">Giới thiệu</a>
+      <a href="#benefits">Lợi ích</a>
+      <a href="#products">Sản phẩm xanh</a>
+      <a href="#contact">Liên hệ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Bán hàng mà không làm hại hành tinh</h1>
+        <p>GreenLife giới thiệu marketing xanh: cách thương hiệu giữ khách hàng bằng những lựa chọn bền vững và minh bạch.</p>
+        <div class="actions">
+          <a class="btn btn-solid" href="#about">Tìm hiểu marketing xanh</a>
+          <a class="btn btn-line" href="#contact">Liên hệ nhóm</a>
+        </div>
+      </div>
+      <div class="leaf" role="img" aria-label="Hình chiếc lá xanh"></div>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <div class="wrap split">
+      <h2>Marketing xanh là gì?</h2>
+      <div class="prose">
+        <p>Marketing xanh là cách doanh nghiệp thiết kế, định giá, phân phối và quảng bá sản phẩm sao cho giảm tác động xấu lên môi trường. Nó bắt đầu từ chính sản phẩm và quy trình làm ra sản phẩm, rồi mới đến thông điệp quảng cáo.</p>
+        <p>Người tiêu dùng ngày càng để ý nguồn gốc nguyên liệu, bao bì và cách thương hiệu xử lý rác thải. Một thông điệp xanh chỉ có sức nặng khi doanh nghiệp làm thật và nói đúng sự thật.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section band" id="benefits">
+    <div class="wrap">
+      <h2>Lợi ích cho thương hiệu và khách hàng</h2>
+      <div class="rows">
+        <div class="row">
+          <h3>Tạo niềm tin lâu dài</h3>
+          <p>Khách hàng nhớ những thương hiệu nhất quán giữa lời nói và việc làm. Cam kết xanh rõ ràng giúp thương hiệu khác biệt với đối thủ.</p>
+        </div>
+        <div class="row">
+          <h3>Tiết kiệm chi phí vận hành</h3>
+          <p>Giảm bao bì, dùng lại vật liệu và tiết kiệm năng lượng thường làm giảm chi phí về lâu dài.</p>
+        </div>
+        <div class="row">
+          <h3>Gắn kết với cộng đồng trẻ</h3>
+          <p>Nhiều bạn trẻ ưu tiên sản phẩm có trách nhiệm với môi trường. Các hoạt động như thu gom, tái chế hay đổi quà xanh dễ tạo sự tham gia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="products">
+    <div class="wrap">
+      <h2>Sản phẩm xanh dễ bắt đầu</h2>
+      <div class="items">
+        <div class="item">
+          <h3>Túi vải tái sử dụng</h3>
+          <p>Thay thế túi ni lông dùng một lần khi mua sắm hằng ngày.</p>
+        </div>
+        <div class="item">
+          <h3>Bình nước giữ nhiệt</h3>
+          <p>Dùng lâu dài, giảm chai nhựa và ly giấy bỏ đi.</p>
+        </div>
+        <div class="item">
+          <h3>Ống hút tre và inox</h3>
+          <p>Lựa chọn thay cho ống hút nhựa, rửa và dùng lại nhiều lần.</p>
+        </div>
+        <div class="item">
+          <h3>Sổ giấy tái chế</h3>
+          <p>Làm từ giấy đã qua sử dụng, phù hợp cho học tập và văn phòng.</p>
+        </div>
+      </div>
+      <p class="note">Danh sách trên là ví dụ minh họa. Nhóm có thể thay bằng sản phẩm và hình ảnh thật của dự án.</p>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <h2>Liên hệ Nhóm 1 MKT</h2>
+      <p>Bạn muốn góp ý hoặc cùng làm một chiến dịch xanh nhỏ? Gửi email cho nhóm, chúng mình sẽ trả lời sớm.</p>
+      <div class="actions">
+        <a class="btn btn-solid" href="mailto:email@example.com?subject=Lien%20he%20GreenLife">Gửi email cho nhóm</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    GreenLife là website dự án học tập của Nhóm 1 MKT.
+  </div>
+</footer>
+
+</body>
+</html>
